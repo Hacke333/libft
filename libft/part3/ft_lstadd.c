@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:53:55 by hacker333        ###   ########.fr       */
+/*   Created: 2023/05/19 00:50:28 by hacker333         #+#    #+#             */
+/*   Updated: 2023/05/19 00:50:33 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "../libft.h"
 
-void	del(t_list *lst)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	ft_putendl(lst->content);
-	ft_putnbr(lst->content_size);
-	ft_putendl("");
-}
+	t_list	*tmp;
 
-int	main(void)
-{
-	t_list	*list;
-	t_list	*list2;
-
-	list = ft_lstnew("hello", 6);
-	list2 = ft_lstnew("world", 6);
-	ft_lstadd(&list, list2);
-	ft_lstiter(list, del);
-	return (0);
+	tmp = *alst;
+	*alst = new;
+	new->next = tmp;
 }
