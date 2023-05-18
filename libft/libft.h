@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:17:25 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:14:13 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/19 00:26:33 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,21 @@ char			*ft_strtrim(char const *s);
 char			**ft_strsplit(const char *s, char c);
 
 char			*ft_itoa(int n);
+
+void			ft_putchar(char c);
+
+void			ft_putstr(char const *s);
+
+void			ft_putendl(char const *s);
+
+void			ft_putnbr(int n);
+
+void			ft_putchar_fd(char c, int fd);
+
+void			ft_putstr_fd(char const *s, int fd);
+
+void			ft_putendl_fd(char const *s, int fd);
+
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
