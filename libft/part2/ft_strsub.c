@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:18:44 by hacker333        ###   ########.fr       */
+/*   Created: 2023/05/19 00:00:02 by hacker333         #+#    #+#             */
+/*   Updated: 2023/05/19 00:02:11 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "../libft.h"
 
-int	main(void)
+char	*ft_strsub(char const *s, unsigned int start, unsigned int len)
 {
-	//test itoa
-	printf("itoa: %s\n", ft_itoa(123));
-	printf("itoa: %s\n", ft_itoa(-123));
-	printf("itoa: %s\n", ft_itoa(0));
-	printf("itoa: %s\n", ft_itoa(2014748364));
-	printf("itoa: %s\n", ft_itoa(-2147483647));
-	return (0);
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	str = ft_strnew(len);
+	if (!str)
+		return (0);
+	while (len--)
+		str[i++] = s[start++];
+	return (str);
 }

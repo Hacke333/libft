@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:17:25 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/18 09:15:48 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/19 00:14:13 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,15 @@ char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int				ft_strequ(const char *s1, const char *s2);
 
 int				ft_strnequ(const char *s1, const char *s2, unsigned int n);
+
+char			*ft_strsub(char const *s, unsigned int start, unsigned int len);
+
+char			*ft_strjoin(char const *s1, char const *s2);
+
+char			*ft_strtrim(char const *s);
+
+char			**ft_strsplit(const char *s, char c);
+
+char			*ft_itoa(int n);
 
 #endif
