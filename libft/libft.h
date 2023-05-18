@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:17:25 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:33:12 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/19 00:45:15 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,5 +130,8 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
 t_list				*ft_lstnew(void const *content, unsigned int content_size);
+
+void				ft_lstdelone(t_list **alst, void (*del)(void *,
+							unsigned int));
 
 #endif

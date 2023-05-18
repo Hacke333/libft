@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:46:30 by hacker333        ###   ########.fr       */
+/*   Created: 2023/05/19 00:42:58 by hacker333         #+#    #+#             */
+/*   Updated: 2023/05/19 00:46:07 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "../libft.h"
 
-void	del(void *content, unsigned int content_size)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, unsigned int))
 {
-	ft_putendl("del");
-	ft_putendl(content);
-	ft_putnbr(content_size);
-	ft_putendl("");
-}
-
-int	main(void)
-{
-	t_list	*new;
-
-	new = ft_lstnew("Hello", 5);
-	ft_lstdelone(&new, del);
-	del(new->content, new->content_size);
-	return (0);
+	del((*alst)->content, (*alst)->content_size);
+	ft_memdel((void **)alst);
 }
