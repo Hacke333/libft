@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/18 08:36:29 by hacker333        ###   ########.fr       */
+/*   Created: 2023/05/18 08:22:40 by hacker333         #+#    #+#             */
+/*   Updated: 2023/05/18 08:22:49 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "../libft.h"
 
-char	a(char c)
+char	*ft_strnew(unsigned int size)
 {
-	return (c + 1);
-}
+	char	*ptr;
 
-int	main(void)
-{
-	char	*str;
-	char	*new;
-
-	str = "Hello World!";
-	new = ft_strmap(str, a);
-	printf("%s\n", new);
-	return (0);
+	ptr = (char *)ft_memalloc(size + 1);
+	return (ptr);
 }

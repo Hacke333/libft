@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:17:25 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/17 22:51:38 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/18 08:33:29 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,21 @@ int				ft_isprint(int c);
 int				ft_toupper(int c);
 
 int				ft_tolower(int c);
+
+void			*ft_memalloc(unsigned int size);
+
+void			ft_memdel(void **ap);
+
+char			*ft_strnew(unsigned int size);
+
+void			ft_strdel(char **as);
+
+void			ft_strclr(char *s);
+
+void			ft_striter(char *s, void (*f)(char *));
+
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+char			*ft_strmap(const char *s, char (*f)(char));
 
 #endif
