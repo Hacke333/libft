@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/19 00:53:55 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/19 00:59:12 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 #include <string.h>
 #include <unistd.h>
 
-void	del(t_list *lst)
+t_list	*del(t_list *lst)
+{
+	lst->content = "deleted";
+	return (lst);
+}
+
+void	print(t_list *lst)
 {
 	ft_putendl(lst->content);
 	ft_putnbr(lst->content_size);
@@ -31,6 +37,7 @@ int	main(void)
 	list = ft_lstnew("hello", 6);
 	list2 = ft_lstnew("world", 6);
 	ft_lstadd(&list, list2);
-	ft_lstiter(list, del);
+	list = ft_lstmap(list, del);
+	ft_lstiter(list, print);
 	return (0);
 }
