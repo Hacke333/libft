@@ -6,7 +6,7 @@
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 00:17:25 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/18 08:33:29 by hacker333        ###   ########.fr       */
+/*   Updated: 2023/05/18 08:52:33 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 char			*ft_strmap(const char *s, char (*f)(char));
+
+char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 #endif
