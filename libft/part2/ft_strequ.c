@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacker333 <hacker333>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 00:18:48 by hacker333         #+#    #+#             */
-/*   Updated: 2023/05/18 09:16:31 by hacker333        ###   ########.fr       */
+/*   Created: 2023/05/18 09:10:13 by hacker333         #+#    #+#             */
+/*   Updated: 2023/05/18 09:15:02 by hacker333        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "../libft.h"
 
-int	main(void)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	char	*str;
-	char	*str2;
+	unsigned int	i;
 
-	str = ft_memalloc(10);
-	str2 = ft_memalloc(10);
-	ft_strcpy(str, "Hello");
-	ft_strcpy(str2, "Hello ");
-	printf("ft_strequ: %d\n", ft_strnequ(str, str2, 6));
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	if ((s1[i] - s2[i]) == 0)
+		return (1);
 	return (0);
 }
