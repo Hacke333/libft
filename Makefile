@@ -5,7 +5,7 @@ SRCS = $(shell find . -name '*.c')
 OBJS = $(SRCS:%.c=build/%.o)
 
 all: $(OBJS)
-	$(CC) $(CFLAGS) -o test $(OBJS)
+	ar rcs libft.a $(OBJS)
 
 build/%.o: %.c
 	@mkdir -p $(@D)
@@ -15,7 +15,7 @@ clean:
 	rm -rf $(OBJS)
 
 fclean: clean
-	rm -rf test
+	rm -rf libft.a
 
 check:
 	norminette .
